@@ -118,7 +118,7 @@
             const user = tg.initDataUnsafe.user;
             document.getElementById('username').textContent = `${user.first_name} ${user.last_name || ''}`;
 
-            const response = await fetch(`/get_ratings?user_id=${user.id}`);
+            const response = await fetch(`http://127.0.0.1:5000/get_ratings?user_id=${user.id}`);
             const ratings = await response.json();
 
             const ratingsContainer = document.getElementById('ratings-container');
